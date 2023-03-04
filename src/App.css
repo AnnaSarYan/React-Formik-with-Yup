@@ -1,38 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(20, 20, 20);
+}
+/* .header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+.header {
+  position: relative;
+  text-align: center;
+  width: 800px;
+  margin: 20px;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  height: 5px;
+  width: 30%;
+  background-color: #d620c9;
+  border-radius: 5px;
+}
+
+.line.left {
+  left: 0;
+}
+
+.line.right {
+  right: 0;
+}
+
+h1{
+  display: inline-block;
+  position: relative;
+  font-family: Roboto;
+  align-items: center;
+  text-align: center;
+  color: #d620c9;
+  font-size: 25px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+}
+input.input-error,
+select.input-error {
+  border:  solid #ec5569;
+  outline: none;
+}
+input::placeholder,
+select::placeholder {
+  color: #a0aec0;
+}
+input,
+select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 3px 0;
+  font-size: 1rem;
+  color: black;
+  border: 2px solid #b5b5b6;
+  background-color: #ececec;
+  border-radius: 5px;
+  outline: none;
+}
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 8px 20px;
+  background-color: #d620c9;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  width: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+button:disabled {
+  opacity: 0.35;
+}
+form label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  margin: 1rem 0 0.2rem;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+form {
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.error {
+  color: #fc8181;
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 0.25rem;
+}
+.or{
+  text-align: center;
+  display: block;
+  margin: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.form-component {
+  border-radius: 5px;
+  width: 500px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.first-last-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input {
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.text-input {
+  display: flex;
+  flex-direction: column;
+}
+.text-input > input {
+  width: 100%;
+}
+label {
+  color: white;
+}
+.checkbox {
+  margin: 20px;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox input{
+  flex: 15%;
+  background-color:  rgb(20, 20, 20);
+}
+
+.checkbox span {
+flex: 85%;
+color: rgb(121, 121, 121);
+font-size: 12px;
+}
+.google-sign-in {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 100px;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  height: 50px;
+}
+
+.google-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+.checkbox-input {
+  box-sizing: border-box;
+  border: 1px solid #d620c9 !important;
+  border-radius: 4px;
+  padding: 6px;
+  margin-right: 8px;
+}
+
+.checkbox-input:checked {
+  background-color: #d620c9;
+  color: #fff;
 }
